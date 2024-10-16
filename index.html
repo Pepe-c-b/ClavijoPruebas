@@ -6,14 +6,18 @@
 
     <title>Clavijo</title>
     <link rel="icon" href="icono pestaña png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   
     
     
     <style>
 
-    body {
-            background-color: #facbcb 
+body {
+            font-family: 'Roboto', sans-serif; /* Fuente estilizada y profesional */
+            background-color: #facbcb; /* Fondo suave para mejorar la legibilidad */
+            padding: 20px;
+            margin: 0;
         }
 
         .header {
@@ -98,6 +102,52 @@ nav a {
 li a:hover:not(.active) {
   background-color: #830301 ;
 }
+.texto {
+            border: 2px solid black; /* Filo negro */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 20px; /* Espacio interno */
+            background-color: white; /* Fondo blanco */
+            width: 100%; /* Ancho completo del contenedor */
+            max-width: 90%; /* Ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+            margin: 20px auto; /* Centra el div en la página y asegura márgenes iguales a ambos lados */
+            display: block;
+            white-space: normal; /* Permite que el texto se ajuste y haga saltos de línea */
+            text-align: justify; /* Justifica el texto */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+        }
+
+
+        h2 {
+            font-size: 1.5em; /* Tamaño grande para destacar el título */
+            color: #333; /* Color oscuro para el título */
+            font-weight: 700; /* Negrita */
+            margin-bottom: 15px; /* Espaciado inferior */
+            text-align: center; /* Alineación centrada */
+        }
+
+        p {
+            font-size: 1em; /* Tamaño de texto ajustado para mayor legibilidad */
+            line-height: 1.5; /* Altura de línea más alta para mayor comodidad de lectura */
+            color: #555; /* Color gris oscuro para el texto */
+            margin-bottom: 15px; /* Espaciado entre párrafos */
+        }
+
+
+          /* Estilo para pantallas pequeñas */
+          @media (max-width: 600px) {
+            .texto {
+                padding: 15px; /* Ajustar padding para pantallas pequeñas */
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 1.3em; /* Tamaño de la cabecera más pequeño */
+            }
+
+            p {
+                font-size: 0.9em; /* Tamaño del texto más pequeño para mejorar la legibilidad */
+            }
+        }
 
     </style>
 
@@ -123,6 +173,17 @@ li a:hover:not(.active) {
 
     
 </body>
+<div class="texto">
+    <p><strong>PUERTAS CLAVIJO</strong>, es una empresa centenaria radicada en Sevilla, en el Polígono Industrial La Chaparrilla, junto a la autovía de Málaga, dedicada desde su fundación al sector metalúrgico.</p>
 
-Somos una empresa tattatata
+    <p>Lo que comenzó como producción de cocinas económicas, al día de hoy se ha convertido en una empresa especializada en puertas metálicas de todo tipo y sus automatismos.</p>
+    
+    <p>Durante todos los años de su larga existencia, esta empresa ha tenido una progresión continua en todos los trabajos que dentro de su especialidad le han demandado sus múltiples clientes.</p>
+    
+    <p><strong>AUTOMATISMOS Y PUERTAS CLAVIJO</strong>, está en disposición de dar un servicio rápido y de calidad a todos sus clientes, tanto a empresas constructoras como a particulares (comercios, viviendas, comunidades).</p>
+
+    <h2>SERVICIOS DISPONIBLES</h2>
+
+    <p>En acero galvanizado. En acero inoxidable (brillo, mate). Aluminio. Aluacero. Puertas basculantes. Puertas correderas. Puertas abatibles. Puertas seccionables. Puertas de apertura rápida. Todos los modelos de puertas pueden ir automatizadas. Para todos estos productos nuestra empresa cuenta con un equipo de profesionales altamente cualificado en fabricación y montaje, con un seguimiento postventa de garantía.</p>
+</div>
 </html>
