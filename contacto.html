@@ -13,11 +13,11 @@
     <style>
 
     body {
-            background-color: #f20905 
+            background-color: #fbfbfb 
         }
 
         .header {
-            background-color: #f20905 ;
+            background-color: #fbfbfb ;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -59,36 +59,41 @@
     }
 }
 
-
-        
 nav {
     border-radius: 20px; 
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #be0502 ;
-  display: flex;
-    justify-content: flex-start     ;
-
-  
-  width: 100%;
-  margin-top: 15px;
-    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Esto puede ser modificado según la necesidad */
+    background-color: #be0502;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    width: 100%;
+    margin-top: 15px;
+    flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    white-space: nowrap; /* Evita saltos de línea en los elementos */
 }
 
-li {
-  float: inline-block;
+nav ul {
+    display: flex; /* Mantiene el ul como flexbox */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
-li a {
-    border-radius: 20px; 
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav li {
+    flex: 1; /* Cada elemento ocupará el mismo espacio */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+    min-width: 100px; /* Establece un ancho mínimo para cada elemento */
 }
+
+nav a {
+    display: block; /* Asegura que el área de clic ocupe todo el espacio del li */
+    padding: 15px; /* Agrega espacio alrededor del texto */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
 
 li a:hover:not(.active) {
   background-color: #830301 ;
@@ -155,7 +160,7 @@ li a:hover:not(.active) {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 20px; /* Espacio entre los botones */
+            gap: 50px; /* Espacio entre los botones */
             margin-top: 50px;
         }
 
@@ -173,16 +178,16 @@ li a:hover:not(.active) {
         }
 
         .call-button {
-            background-color: #28a745;
+            background-color: #007bff;
         }
 
         .call-button:hover {
-            background-color: #218838;
+            background-color: #007bff;
             transform: scale(1.05);
         }
 
         .call-button:active {
-            background-color: #1e7e34;
+            background-color: #004085;
         }
 
         /* Botón de correo */
@@ -191,7 +196,7 @@ li a:hover:not(.active) {
         }
 
         .email-button:hover {
-            background-color: #0056b3;
+            background-color: #007bff;
             transform: scale(1.05);
         }
 
