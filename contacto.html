@@ -6,6 +6,7 @@
 
     <title>Clavijo</title>
     <link rel="icon" href="icono pestaña png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   
     
@@ -13,11 +14,13 @@
     <style>
 
     body {
-            background-color: #fbfbfb 
+        font-family: 'Roboto', sans-serif; /* Fuente estilizada y profesional */
+            background-color: #facbcb; /* Color de fondo suave */
+            padding: 5px; 
         }
 
         .header {
-            background-color: #fbfbfb ;
+            background-color: #facbcb  ;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -70,6 +73,7 @@ nav {
     justify-content: space-between; /* Distribuye el espacio uniformemente */
     width: 100%;
     margin-top: 15px;
+    margin-bottom: 10px;
     flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
     white-space: nowrap; /* Evita saltos de línea en los elementos */
 }
@@ -103,7 +107,7 @@ li a:hover:not(.active) {
 .call-button {
             display: inline-block;
             padding: 15px 30px;
-            background-color: white;
+            background-color: f6f4f2 ;
             color: rgb(0, 0, 0);
             font-size: 18px;
             font-weight: bold;
@@ -125,13 +129,14 @@ li a:hover:not(.active) {
 
         .call-container {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .email-button {
             display: inline-block;
             padding: 15px 30px;
-            background-color: #007bff;
+            background-color: #be0502;
             color: white;
             font-size: 18px;
             font-weight: bold;
@@ -153,7 +158,8 @@ li a:hover:not(.active) {
 
         .email-container {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         .auto-contacto-container {
             display: flex;
@@ -161,7 +167,9 @@ li a:hover:not(.active) {
             justify-content: center;
             align-items: center;
             gap: 50px; /* Espacio entre los botones */
-            margin-top: 50px;
+            margin: auto; /* Centra los botones horizontalmente */
+            padding: 40px 0; /* Ajusta el espacio vertical para que los botones tengan la misma distancia con la barra de navegación y el texto */
+    max-width: 800px; /* Ajusta el ancho máximo si es necesario */
         }
 
         /* Botón de llamada */
@@ -211,6 +219,38 @@ li a:hover:not(.active) {
                 gap: 10px; /* Espacio entre los botones para pantallas pequeñas */
             }
         }
+
+        .texto {
+            border: 2px solid black; /* Filo negro */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 20px; /* Espacio interno */
+            background-color: white; /* Fondo blanco */
+            max-width: 500px; /* Ancho máximo */
+            margin: 10px auto; /* Centra el div en la página */
+            display: flex;
+            flex-direction: column; /* Organiza el contenido en columna */
+            justify-content: center; /* Centra verticalmente */
+            align-items: center; /* Centra horizontalmente */
+            white-space: nowrap; /* Evita el salto de línea */
+        }
+
+         /* Estilo para las cabeceras */
+         h2 {
+            font-size: 1.8em; /* Tamaño grande */
+            color: #333; /* Color oscuro para destacar */
+            font-weight: 700; /* Negrita */
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        /* Estilo para los textos inferiores */
+        p {
+            font-size: 1em; /* Tamaño menor para textos secundarios */
+            color: #555; /* Color gris oscuro para mejor legibilidad */
+            margin-top: 0; /* Elimina el margen superior */
+            margin-bottom: 20px; /* Espacio inferior entre bloques de texto */
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -240,7 +280,18 @@ li a:hover:not(.active) {
             <a href="mailto:a.p.clavijo@gmail.com" class="email-button">📧 Escribe un correo</a>
         </div>
     </div>
-        
+
+    <div class="texto">
+        <h2>Teléfono de contacto:</h2>
+        <p>+256 876 545 67</p>
+
+        <h2>Correo electrónico:</h2>
+        <p>supu@gmail.com</p>
+
+        <h2>Dirección:</h2>
+        <p>Calle Quinto Pino, 12</p>
+    </div>
    
 </body>
+
 </html>
