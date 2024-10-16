@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clavijo</title>
+    <link rel="icon" href="icono pestaña png.png">
+
+  
+    
+    
+    <style>
+
+    body {
+            background-color: #f20905 
+        }
+
+        .header {
+            background-color: #f20905 ;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+            
+        
+
+
+
+
+        .logo-container {
+        display: inline-block;
+    }
+
+        .logo-container img {
+            border-radius: 10px; 
+            display: auto;
+            width: 100%; /* Ajusta este valor según sea necesario */
+            height: auto; /* Ajusta este valor según sea necesario */
+        }
+                
+        @media (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container, nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+        
+nav {
+    border-radius: 20px; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #be0502 ;
+  display: flex;
+    justify-content: flex-start     ;
+
+  
+  width: 100%;
+  margin-top: 15px;
+    
+}
+
+li {
+  float: inline-block;
+}
+
+li a {
+    border-radius: 20px; 
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #830301 ;
+}
+
+    </style>
+
+</head>
+
+<body >
+    <div class="header">
+        <div class="logo-container">
+
+                <img src="logo y nombre horizontal.jpeg" >
+            
+        </div>
+        <div class="Barra navegacion">
+            <nav>
+               <li> <a href="index.html">¿Quienes somos?</a></li>
+                <!--<li><a href="catalogo.html">Catalogo</a></li>-->
+               <li><a href="contacto.html">Contacto</a></li>
+            
+            </nav>
+            <hr>
+        </div> 
+    </div>
+
+    
+</body>
+
+Somos una empresa tattatata
+</html>

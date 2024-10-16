@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clavijo</title>
+    <link rel="icon" href="icono pestaña png.png">
+
+  
+    
+    
+    <style>
+
+    body {
+            background-color: #f20905 
+        }
+
+        .header {
+            background-color: #f20905 ;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+            
+        
+
+
+
+
+        .logo-container {
+        display: inline-block;
+    }
+
+        .logo-container img {
+            border-radius: 10px; 
+            display: auto;
+            width: 100%; /* Ajusta este valor según sea necesario */
+            height: auto; /* Ajusta este valor según sea necesario */
+        }
+                
+        @media (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container, nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+        
+nav {
+    border-radius: 20px; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #be0502 ;
+  display: flex;
+    justify-content: flex-start     ;
+
+  
+  width: 100%;
+  margin-top: 15px;
+    
+}
+
+li {
+  float: inline-block;
+}
+
+li a {
+    border-radius: 20px; 
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #830301 ;
+}
+
+
+.call-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: white;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .call-button:hover {
+            background-color: #ffffffe9;
+            transform: scale(1.05);
+        }
+
+        .call-button:active {
+            background-color: #830301;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .call-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .email-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .email-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .email-button:active {
+            background-color: #004085;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .auto-contacto-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Espacio entre los botones */
+            margin-top: 50px;
+        }
+
+        /* Botón de llamada */
+        .call-button, .email-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            color: white;
+        }
+
+        .call-button {
+            background-color: #28a745;
+        }
+
+        .call-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .call-button:active {
+            background-color: #1e7e34;
+        }
+
+        /* Botón de correo */
+        .email-button {
+            background-color: #007bff;
+        }
+
+        .email-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .email-button:active {
+            background-color: #004085;
+        }
+
+        /* Estilo para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .auto-contacto-container {
+                flex-direction: column;
+                gap: 10px; /* Espacio entre los botones para pantallas pequeñas */
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+
+                <img src="logo y nombre horizontal.jpeg" >
+            
+        </div>
+        <div class="Barra navegacion">
+            <nav>
+               <li> <a href="index.html">¿Quienes somos?</a></li>
+               <!--<li><a href="catalogo.html">Catalogo</a></li>-->
+               <li><a href="contacto.html">Contacto</a></li>
+            
+            </nav>
+            <hr>
+        </div> 
+    </div>
+    <div class="auto-contacto-container">
+        <div class="call-container">
+            <a href="tel:+34954386454" class="call-button">📞Llama ahora</a>
+        </div>
+
+        <div class="email-container">
+            <a href="mailto:a.p.clavijo@gmail.com" class="email-button">📧 Escribe un correo</a>
+        </div>
+    </div>
+        
+    
+    telefono:2345678<br>
+    correo: 3456789@gmail.com<br>
+    direccion: villaperdida 33<br>
+</body>
+</html>

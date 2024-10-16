@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clavijo</title>
+    <link rel="icon" href="icono pestaña png.png">
+
+  
+    
+    
+    <style>
+
+        
+
+    body {
+            background-color: #f20905 
+        }
+
+        .header {
+            background-color: #f20905 ;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            
+        }
+            
+        @media (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container, nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+}
+
+
+
+
+        .logo-container {
+        display: inline-block;
+        
+    }
+
+    
+
+        .logo-container img {
+            border-radius: 10px; 
+            display: auto;
+            width: 100%; /* Ajusta este valor según sea necesario */
+            height: auto; /* Ajusta este valor según sea necesario */
+        }
+                
+
+
+        
+nav {
+    border-radius: 20px; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #be0502 ;
+  display: flex;
+    justify-content: flex-start     ;
+
+  
+  width: 100%;
+  margin-top: 15px;
+    
+}
+
+li {
+  float: inline-block;
+}
+
+li a {
+    border-radius: 20px; 
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #830301 ;
+}
+
+
+
+
+
+
+
+
+
+        .photo-block {
+            text-align: center;
+            border: 2px solid #cdcdcd; /* Cambia este color al que prefieras */
+            border-radius: 20px; /* Cambia este valor para ajustar el redondeo de los bordes */
+            padding: 1px; /* Espacio interior entre el contenido y el borde */
+            width: 100%; /* Ancho del bloque */
+            max-width: 350px; /* Ancho máximo del bloque */
+            height: 350px; /* Altura del bloque */
+            background: #fff8df;
+
+            flex-basis: 100%;
+            flex: 0 0 100%; /* Ajusta este valor para cambiar el tamaño mínimo del bloque */
+            margin: 10px ; /* Ajusta este valor para cambiar el espacio entre los bloques */
+            box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total del bloque */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+          
+            
+        }
+
+            @media (min-width: 600px) {
+                .photo-block {
+                    display: flex;
+                    flex-basis: calc(50% - 20px); /* Cada bloque ocupa el 50% del ancho (2 bloques por fila) */
+    
+                    justify-content: center;
+                }
+            }
+
+        /* Para pantallas de al menos 900px (típicamente ordenadores) */
+        @media (min-width: 900px) {
+            .photo-block {
+                display: flex;
+                flex-basis: calc(25% - 20px); /* Cada bloque ocupa el 25% del ancho (4 bloques por fila) */
+                justify-content: center;
+            }
+        }
+
+
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch; /* Asegura que todos los bloques tengan la misma altura */
+            
+
+            
+        }
+
+        .photo-image {
+            max-width: 100%; /* Hace que la foto no exceda el ancho del bloque */
+            height: auto; /* Hace que la altura de la foto se ajuste para mantener las proporciones de la foto */
+            object-fit: cover; /* Hace que la foto se recorte para llenar el bloque, manteniendo las proporciones de la foto */
+            margin-bottom: 1vh; /* Añade un espacio debajo de la foto */
+            justify-content: center;
+        }
+
+        h2 {
+            margin-bottom: 0; /* Reduce el margen inferior del elemento h3 a 0 */
+            margin-top: 1vh;
+        }
+
+        .photo-description {
+            margin-top: 0; /* Reduce el margen superior del elemento p a 0 */
+            margin-bottom: 10; 
+        }
+
+        .photo-metadata-block {
+            overflow-wrap: break-word; /* Rompe las palabras que son demasiado largas para caber en una línea */
+            word-wrap: break-word; /* Para navegadores antiguos */
+            font-size: 1em;
+ }
+        
+
+ .carousel {
+    display: flex;
+    position: relative;
+    width: fit-content; /* Ajusta el ancho del contenedor al de su contenido */
+    height: fit-content; /* Ajusta el alto del contenedor al de su contenido */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto; /* Añade esta línea para centrar el carrusel */
+
+  
+ }
+
+ .carousel-image {
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    
+ }
+
+ .carousel-control {
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    font-size: 2em; /* Ajusta el tamaño de la flecha */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a8989;
+    opacity: 0.5;
+ }
+
+ .carousel-control.prev {
+    color: #000000; /* Cambia el color a rojo */
+    opacity: 0.75; /* Cambia la opacidad a 50% */
+    left: 10px;
+ }
+
+ .carousel-control.next {
+    color: #000000; /* Cambia el color a rojo */
+    opacity: 1; /* Cambia la opacidad a 50% */
+    right: 10px;
+ }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+
+                <img src="logo y nombre horizontal.jpeg" >
+            
+        </div>
+        <div class="Barra navegacion">
+            <nav>
+               <li> <a href="index.html">¿Quienes somos?</a></li>
+                <!--<li><a href="catalogo.html">Catalogo</a></li>-->
+               <li><a href="contacto.html">Contacto</a></li>
+            
+            </nav>
+            <hr>
+        </div> 
+    </div>
+
+
+
+
+   
+
+    <div class="photo-container">
+
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+        <div class="photo-block">
+            <div class="photo-header-block">
+                <h2 class="photo-title">Modelo 1</h2>
+                <h3 class="photo-score"></h3>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">◁</button>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 1.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 3.2.jpeg">
+                </div>
+                <div class="carousel-image">
+                    <img src="ejemplo catalogo 4.jpeg">
+                </div>
+                <button class="carousel-control next">▷</button>
+            </div>
+            <div class="photo-metadata-block">
+                <h2>300€</h2>
+                <p class="photo-description">galvanizado, ideal exteriroes, negocios,blablabla</p>
+            </div>
+        </div>
+
+
+            </div>
+        </div>       
+
+
+
+        <script src="carrusel.js"></script>
+
+   
+</body>
+</html>
