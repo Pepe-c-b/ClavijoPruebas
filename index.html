@@ -16,18 +16,19 @@
 body {
             font-family: 'Roboto', sans-serif; /* Fuente estilizada y profesional */
             background-color: #facbcb; /* Fondo suave para mejorar la legibilidad */
-            padding: 20px;
+            padding: 0;
             margin: 0;
         }
-
         .header {
-            background-color: #facbcb ;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-        }
-            
+    background-color: #facbcb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;   /* Hace que ocupe el 100% del contenedor padre */
+    margin: 0;     /* Elimina márgenes por si hay espacio alrededor */
+    padding: 0;    /* Elimina relleno por si hay espacio interno */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
         
 
 
