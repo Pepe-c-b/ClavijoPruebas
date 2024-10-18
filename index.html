@@ -14,25 +14,18 @@
     <style>
 
 body {
-            font-family: 'Roboto', sans-serif; /* Fuente estilizada y profesional */
-            background-color: #facbcb; /* Fondo suave para mejorar la legibilidad */
-            padding: 20px;
-            margin: 0;
+        font-family: 'Roboto', sans-serif; /* Fuente estilizada y profesional */
+            background-color: #facbcb; /* Color de fondo suave */
+            padding: 5px; 
         }
 
         .header {
-            background-color: #facbcb ;
+            background-color: #facbcb  ;
             position: sticky;
             top: 0;
             z-index: 1000;
-            width: 100%;  /* Hace que ocupe el 100% del contenedor padre */
-    
-}
-        
-
-
-
-
+            width: 100%;
+        }
         .logo-container {
         display: inline-block;
     }
@@ -45,6 +38,7 @@ body {
         }
                 
         @media (max-width: 600px) {
+            
     .header {
         display: flex;
         flex-direction: column;
@@ -75,6 +69,7 @@ nav {
     justify-content: space-between; /* Distribuye el espacio uniformemente */
     width: 100%;
     margin-top: 15px;
+    margin-bottom: 10px;
     flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
     white-space: nowrap; /* Evita saltos de línea en los elementos */
 }
